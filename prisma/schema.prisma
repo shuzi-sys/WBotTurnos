@@ -1,0 +1,40 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+// Get a free hosted Postgres database in seconds: `npx create-db`
+
+enum motivoTurno {
+  CORTE
+  TINTURA
+  ALISADO_PERMANENTES
+  TRATAMIENTOS
+  CONSULTA
+  OTROS
+}
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+}
+
+model Peluquero {
+  id Int @id @default(autoincrement())
+  nombre String @unique
+  telefono String @unique
+  turnos Turno[]
+  habilidades motivoTurno[]
+}
+
+model Turno {
+  id Int @id @default(autoincrement())
+  peluquero Peluquero @relation(fields: [peluqueroId], references: [id])
+  peluqueroId Int
+  nombre String?
+  motivo motivoTurno[]
+  telefonoCliente String
+  creadoen DateTime @default(now())
+  solicitadopara DateTime 
+}
