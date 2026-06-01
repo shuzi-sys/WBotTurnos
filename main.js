@@ -10,6 +10,7 @@ client.once('ready', () => {
     console.log('Client is ready!');
 });
 
+
 // When the client received QR-Code
 client.on('qr', (qr) => {
     qrcode.generate(qr, {small:true});

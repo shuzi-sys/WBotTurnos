@@ -34,7 +34,9 @@ export const pelubotmessages = {
     Fecha: {
         first:
         `🕰️🗓️ Escribí una fecha y horario para tu turno, o escribí "Hoy + hora deseada" si el turno es para hoy
-        Nota: El horario no puede ser a menos de 25 minutos del cierre para un corte, o menos de 3hr para tinturas (Dependiendo del largo de tu pelo y cantidad a teñir)`
+        Nota: El horario no puede ser a menos de 25 minutos del cierre para un corte, o menos de 3hr para tinturas (Dependiendo del largo de tu pelo y cantidad a teñir)
+        Escribí sólamente "0" para volver atrás`,
+        pasado:`La fecha introducida no es válida porque ya pasó, intentá nuevamente con una fecha futura o escribí "0" para volver atrás`
     },
     Errormessage: 
         ` La opción elegida no forma parte de las disponibles, o el formato no fue el correcto. Intentalo nuevamente`
