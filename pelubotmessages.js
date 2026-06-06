@@ -17,7 +17,7 @@ export const pelubotmessages = {
 `
     },
     Turno: {
-        solicitar:
+        motivos:
         `Para solicitar un turno, primero escogé el / los motivo/s de tu visita con un numero y separando con coma (Ej: 1, 2, 3, 4, etc) 👉
         0 - Volver atrás
         ${motivosTexto}
